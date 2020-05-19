@@ -18,8 +18,7 @@ namespace Retorna_Preco
         public Produto (int id, int qtd)
         {
             Id = id;
-            Qtd = qtd;
-            //ValorProdutos(id, qtd);
+            Qtd = qtd;            
         }
         //METODOS
         public double CalculaValor(int id, int qtd)

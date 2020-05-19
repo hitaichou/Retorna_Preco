@@ -9,8 +9,7 @@ namespace Retorna_Preco
     {
         private double _vlMaoDeObra = 1; //valor hr mao de obra, ex: R$ 1,00/hora
         private double _vlMaoDeObraTotal; //valor total mao de obra
-        private double _vlInsumo = 1; //valor fixo insumo energia/agua/etc
-        //private double _vlDesconto = 0;
+        private double _vlInsumo = 1; //valor fixo insumo energia/agua/etc        
         private double _vlLucro = 2; //valor fixo para calculo lucro
         private double _vlPrecoBruto;
         private double _vlPrecoTotal;
