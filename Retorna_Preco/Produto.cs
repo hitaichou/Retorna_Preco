@@ -34,50 +34,7 @@ namespace Retorna_Preco
             //-------------------------------------
             //METODO PARA CALCULAR VALOR DO PRODUTO
             //-------------------------------------
-            /* if (id == 1)
-             {
-                 //Rosa Monique
-                 double _rosaMonique = 0.1;
-                 _vlSubTotal = _vlSubTotal + (_rosaMonique * qtd);
-             }
-             else if (id == 2)
-             {
-                 //Sepala Pequena
-                 double _sepalaPequena = 0.05;
-                 _vlSubTotal = _vlSubTotal + (_sepalaPequena * qtd);
-             }
-             else if (id == 3)
-             {
-                 //Folha Rosa Grande
-                 double _folhaRosaGrande = 0.1;
-                 _vlSubTotal = _vlSubTotal + (_folhaRosaGrande * qtd);
-             }
-             else if (id == 4)
-             {
-                 //Folha Desidratada
-                 double _folhaDesidratada = 0.05;
-                 _vlSubTotal = _vlSubTotal + (_folhaDesidratada * qtd);
-             }
-             else if (id == 5)
-             {
-                 //Arame
-                 double _arame = 1.00;
-                 _vlSubTotal = _vlSubTotal + (_arame * qtd);
-             }
-             else if (id == 6)
-             {
-                 //Vaso Vidro
-                 double _vasoVidro = 8.00;
-                 _vlSubTotal = _vlSubTotal + (_vasoVidro * qtd);
-             }
-             else if (id == 7)
-             {
-                 //Fita Floral
-                 double _fitaFloral = 0.20;
-                 _vlSubTotal = _vlSubTotal + (_fitaFloral * qtd);
-             }
-             return _vlSubTotal;    
-             */
+           
             switch (id)
             {
                 case 1:

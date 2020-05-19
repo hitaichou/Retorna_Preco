@@ -9,7 +9,8 @@ namespace Retorna_Preco
         static void Main(string[] args)
         {
             double vlTotal =0;
-            //double vlSubTotal;            
+            double vlPrecoCusto=0;
+            
            // Produto p = new Produto();
             Console.WriteLine("Deseja lançar produtos?" + "\n"
                              + "(1) SIM / (0) NÃO");
@@ -26,14 +27,18 @@ namespace Retorna_Preco
                                 + "(5) Arame" + "\n"
                                 + "(6) Vaso de Vidro" + "\n"
                                 + "(7) Fita Floral");
-                int id_produto = int.Parse(Console.ReadLine());
+                int idProduto = int.Parse(Console.ReadLine());
                 Console.WriteLine("Entre com a quantidade:");
-                int qt_produto = int.Parse(Console.ReadLine());
+                int qtProduto = int.Parse(Console.ReadLine());
 
-                Produto p = new Produto(id_produto, qt_produto);                
-                vlSubTotal = p.CalculaValor(id_produto, qt_produto);
-                //----
-                vlTotal = vlTotal + vlSubTotal;
+                
+
+                Produto p = new Produto(idProduto, qtProduto);                
+                vlSubTotal = p.CalculaValor(idProduto, qtProduto);
+                //--------
+                //vlTotal = vlTotal + vlSubTotal;
+                vlPrecoCusto = vlPrecoCusto + vlSubTotal;
+
                 Console.WriteLine("Deseja lançar produtos?" + "\n"
                                 + "(1) SIM / (0) NÃO");
                 n = int.Parse(Console.ReadLine());
@@ -43,6 +48,20 @@ namespace Retorna_Preco
             }
             Console.WriteLine("-------------------------");
             Console.WriteLine("-------------------------");
+            //----------------------------------------------
+            //----------------------------------------------
+            Console.WriteLine("Entre com a Qtd de Horas Trabalhadas");
+            double qtHrtrab = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Entre com o Desconto:");
+            double descPorc = double.Parse(Console.ReadLine());
+
+            //Chama classe de calculo do vl hr trabalhada
+            HoraTrabalho ht = new HoraTrabalho(qtHrtrab, vlPrecoCusto, descPorc);
+            vlTotal = ht.CalculaPreco(qtHrtrab, vlPrecoCusto, descPorc);
+            //----------------------------------------------
+            //----------------------------------------------
+
             Console.WriteLine("Valor Total: " + vlTotal.ToString("F2", CultureInfo.InvariantCulture));
             
         }
